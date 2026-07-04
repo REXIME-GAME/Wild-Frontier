@@ -167,3 +167,48 @@ function drawPlayer() {
     );
 
 }
+// ======================================================
+// Boucle principale
+// ======================================================
+
+function drawHUD() {
+
+    ctx.fillStyle = "white";
+    ctx.font = "22px Arial";
+    ctx.fillText("Wild Frontier - V0.1", 20, 35);
+
+    ctx.font = "16px Arial";
+    ctx.fillText(
+        "Position : " +
+        Math.floor(player.x) +
+        " / " +
+        Math.floor(player.y),
+        20,
+        60
+    );
+
+}
+
+function render() {
+
+    drawGround();
+
+    drawDecor();
+
+    drawPlayer();
+
+    drawHUD();
+
+}
+
+function gameLoop() {
+
+    updatePlayer();
+
+    render();
+
+    requestAnimationFrame(gameLoop);
+
+}
+
+gameLoop();
