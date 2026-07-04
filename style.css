@@ -1,1 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #d2b16f;
+    touch-action: none;
+    font-family: Arial, sans-serif;
+}
 
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: #d8c07b;
+}
+
+#ui {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.btn {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: rgba(255,255,255,0.25);
+    pointer-events: auto;
+    user-select: none;
+}
+
+#up { left: 90px; bottom: 170px; }
+#down { left: 90px; bottom: 30px; }
+#left { left: 20px; bottom: 100px; }
+#right { left: 160px; bottom: 100px; }
+
+#title{
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    text-shadow:2px 2px 4px black;
+}
